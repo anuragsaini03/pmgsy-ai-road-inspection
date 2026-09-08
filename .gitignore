@@ -1,5 +1,18 @@
-node_modules
-dist
-.env
-.env.local
-.DS_Store
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python Cache & Build
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Node dependencies (Frontend)
+node_modules/
+dist/
+
+# Large weight files (if over 100MB)
+*.pt
+*.onnx

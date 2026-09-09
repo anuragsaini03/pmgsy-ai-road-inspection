@@ -34,27 +34,3 @@ This project automates the quality auditing lifecycle:
 4. **Actionable Insights:** Automated reports help government engineers prioritize repair budgets and assign maintenance tasks efficiently.
 
 ---
-
-## 🏗️ System Architecture
-
-```text
-  [ Mobile/Web App / Field Agent ]
-                 │
-                 │ 1. Upload Images/Videos + GPS Metadata
-                 ▼
-  [ API Gateway / Express/FastAPI Backend ] 
-                 │
-        ┌────────┴────────┐
-        │                 │
-        ▼                 ▼
-[ Cloud Storage ]   [ Object Detection Engine ]
- (S3/Cloudinary)    (YOLOv8 / PyTorch Model)
-        │                 │
-        └────────┬────────┘
-                 │ 2. Return Bounding Boxes & Distress Metrics
-                 ▼
-     [ PostgreSQL + PostGIS / MongoDB ] 
-                 │
-                 │ 3. Query Heatmaps & Analytics
-                 ▼
-   [ Interactive Web Dashboard ]
